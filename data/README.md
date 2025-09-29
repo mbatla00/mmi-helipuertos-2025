@@ -1,2 +1,3 @@
 Datos (CSV, shapefiles, Excel, etc.)
-## Explicar origen de datos (no subir archivos muy pesados)
+## explicar origen de datos
+## no subáis datos pesados (>50 MB), mejor un enlace o instrucciones en README.md (aquí)
