@@ -19,10 +19,10 @@ TIEMPO_ACCION_IDEAL = 15
 RADIO_OPERATIVO_KM = (VELOCIDAD_HELICOPTERO * TIEMPO_COBERTURA_MAX) / 60
 
 #PESOS DEL MODELO PARA LA PRIORIDAD
-W_ACCIDENTES_CTRA = 0.2  #prioridad media: Zonas de siniestralidad
+W_ACCIDENTES_CTRA = 0.25  #prioridad media: Zonas de siniestralidad
 W_DIFICULTAD = 0.43      #Alta prioridad: A zonas montañosas(debido a la deficultad de los vehiculos terrestres) y lejanaas a ciudades principales
 W_DENSIDAD = 0.15     #Prioridad media: Cubrir al mayor número de personas
-W_TIENE_CENTRO = 0.15    #Prioridad media: Puntos de transferencia médica
+W_TIENE_CENTRO = 0.10   #Prioridad media: Puntos de transferencia médica
 W_TRANSPLANTES = 0.02   #Prioridad Baja: Especialización: Capacidad crítica
 W_4G = 0.05              #Prioridad baja: Cobertura movil 
 
@@ -88,7 +88,7 @@ df['Score_Prioridad'] = (
     df['Accidentes_Por_Carretera_Norm'] * W_ACCIDENTES_CTRA +
     df['Dificultad_Acceso_Norm'] * W_DIFICULTAD +
     df['DENSIDADMM_Norm'] * W_DENSIDAD +
-    df['tiene_centro_Norm'] * W_TIENE_CENTRO +
+    (1-df['tiene_centro_Norm']) * W_TIENE_CENTRO +
     df['Transplantes_Norm'] * W_TRANSPLANTES +
     (1 - df['4G_Norm']) * W_4G #este es un caso especial ya que necesitamos aplicar el peso al valor inverso de la cobertura
     #debido a que es prioridad donde menos haya cobertura
