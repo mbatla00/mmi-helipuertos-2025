@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import folium
 
 
-ARCHIVO_CSV = 'registro_municipios_completo.csv'
+ARCHIVO_CSV = 'registro-de-municipios-de-castilla-y-leon.csv'
 
 #PARÁMETROS DE LOS HELICOPTEROS:
 
@@ -535,3 +535,4 @@ Bierzo, Villafranca del bierzo, puebla de sanabria,cuellar se repite en multiple
 
 #Villablino tiene helipuerto
 """
+
