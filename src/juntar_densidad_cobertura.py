@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Cargar los archivos
-df_municipios = pd.read_csv('new_municipios.csv')
+df_municipios = pd.read_csv('registro-de-municipios-de-castilla-y-leon.csv')
 df_demanda = pd.read_csv('datos_demanda_final_scaled.csv')
 
 # Normalizar nombres para asegurar el cruce (mayúsculas y espacios)
@@ -27,7 +27,7 @@ df_final = pd.merge(
 df_final = df_final.drop(columns=['Municipio_join', 'Provincia_join'])
 
 # Guardar el resultado
-df_final.to_csv('new_municipios_completo.csv', index=False)
+df_final.to_csv('registro-de-municipios-de-castilla-y-leon.csv', index=False)
 
 # Mostrar las primeras filas para verificar
 print(df_final.head())
