@@ -8,7 +8,7 @@ Created on Mon Dec  8 17:06:16 2025
 import pandas as pd
 
 centros = pd.read_csv("centros-sanitarios-cyl.csv", sep=";")
-municipios = pd.read_csv("registro-de-municipios.csv", sep=";")
+municipios = pd.read_csv("registro-de-municipios-de-castilla-y-leon.csv", sep=";")
 CP = pd.read_csv("codigos_postales_municipales.csv")
 
 
@@ -80,4 +80,5 @@ municipios_merge["tiene_centro"] = (municipios_merge["num_centros_cp"] > 0).asty
 
 municipios_merge = municipios_merge.drop(columns=["Cod_INE", "Mancomunidades", "Entidades_Locales_Menores", "Comarca", "num_centros_cp", "muni_norm"])
 
-municipios_merge.to_csv("new_municipios.csv", index=False)
+municipios_merge.to_csv("registro-de-municipios-de-castilla-y-leon.csv", index=False)
+
