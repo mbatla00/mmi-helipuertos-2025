@@ -66,9 +66,9 @@ def get_dist_score(row):
 
 # Cargar el csv basico
 try:
-    df = pd.read_csv("data/registro-de-municipios-de-castilla-y-leon.csv", sep=";", encoding="utf-8")
+    df = pd.read_csv("registro-de-municipios-de-castilla-y-leon.csv", sep=";", encoding="utf-8")
 except:
-    df = pd.read_csv("data/registro-de-municipios-de-castilla-y-leon.csv", sep=";", encoding="latin-1")
+    df = pd.read_csv("registro-de-municipios-de-castilla-y-leon.csv", sep=";", encoding="latin-1")
 
 # Limpiar Coordenadas
 df['Latitud'] = df['Latitud'].apply(lambda x: float(str(x).replace(',', '.')))
@@ -87,5 +87,5 @@ df['Dificultad_Acceso'] = (df.apply(get_geo_difficulty, axis=1) * 0.7) + \
 df['Dificultad_Acceso'] = df['Dificultad_Acceso'].round(2)
 
 # Guardar en el nuevo csv
-output_file = "data/registro-de-municipios-de-castilla-y-leon.csv"
+output_file = "registro-de-municipios-de-castilla-y-leon.csv"
 df.to_csv(output_file, sep=";", index=False, encoding="utf-8")
