@@ -35,7 +35,7 @@ def cargar_datos():
     """Carga los archivos CSV"""
     try:
         municipios = pd.read_csv(
-            'data/registro-de-municipios-de-castilla-y-leon.csv', 
+            'registro-de-municipios-de-castilla-y-leon.csv', 
             sep=';'
         )
         accidentes = pd.read_csv(
@@ -149,7 +149,7 @@ def main():
     print(resultados.to_string(index=False))
     
     # Guardar el archivo actualizado
-    output_path = 'data/registro-de-municipios-con-accidentes.csv'
+    output_path = 'registro-de-municipios-de-castilla-y-leon.csv'
     municipios_con_accidentes.to_csv(output_path, sep=';', index=False, encoding='utf-8')
     
     print(f"\nArchivo guardado en: {output_path}")
