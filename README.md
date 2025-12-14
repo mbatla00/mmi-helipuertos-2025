@@ -72,7 +72,7 @@ Contiene todos los datasets utilizados en el proyecto, tanto en bruto como proce
 ### `docs/`
 Documentación auxiliar del proyecto:
 
-- `Selección de datos.docx`: justificación de las fuentes y variables
+- `Selección de datos.docx`: informe pequeño sobre el procesamiento de las variables dificultad de acceso y hospitales
 - `hoja_de_control.md`: control de utilización de git
 
 ### `figures/`
