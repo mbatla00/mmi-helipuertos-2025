@@ -1,1 +1,0 @@
-# análisis de resultados, gráficos
