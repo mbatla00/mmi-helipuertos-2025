@@ -19,7 +19,6 @@ git clone git@github.com:<TU_USUARIO>/mmi-helipuertos-2025.git
 ## 3. Guardar cambios (flujo básico)
 Ver el estado:
 ```bash
-Copiar código
 git status
 ```
 Añadir cambios (stage):
@@ -29,7 +28,6 @@ git add .                # todos los cambios (con cuidado)
 ```
 Confirmar cambios (commit):
 ```bash
-Copiar código
 git commit -m "descripción corta del cambio"
 ```
 Subir al repo remoto:
@@ -39,7 +37,6 @@ git push origin NOMBRE_RAMA
 ## 4. Trabajar con ramas
 Crear y cambiar a una nueva rama:
 ```bash
-Copiar código
 git checkout -b feature/nombre-tarea
 o:
 git switch -c feature/nombre-tarea
